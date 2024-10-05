@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحية يومية لعم أحمد</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="greeting"></h1>
+
+    <script>
+        function getGreeting() {
+            const now = new Date();
+            const hours = now.getHours();
+            const greetingElement = document.getElementById("greeting");
+
+            if (hours < 12) {
+                greetingElement.textContent = "صباح الخير يا عم أحمد";
+            } else {
+                greetingElement.textContent = "مساء الخير يا عم أحمد";
+            }
+        }
+
+        getGreeting();
+    </script>
+</body>
+</html>
